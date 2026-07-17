@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.4](https://github.com/monitoring-forge/selfsigned/compare/v0.0.3...v0.0.4) - 2026-07-17
+
+- trasfer repo and go version by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/37
+- Put back module path from monitoring-forge to kazeburo by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/39
+
 ## [v0.0.3](https://github.com/kazeburo/selfsigned/compare/v0.0.2...v0.0.3) - 2026-07-03
 
 - pin actions commithash by @kazeburo in https://github.com/kazeburo/selfsigned/pull/10
