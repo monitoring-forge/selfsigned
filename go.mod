@@ -1,4 +1,4 @@
-module github.com/kazeburo/selfsigned
+module github.com/monitoring-forge/selfsigned
 
 go 1.25
 
