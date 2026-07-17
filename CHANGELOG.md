@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.5](https://github.com/monitoring-forge/selfsigned/compare/v0.0.4...v0.0.5) - 2026-07-17
+
+- Update go.mod by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/40
+
 ## [v0.0.4](https://github.com/monitoring-forge/selfsigned/compare/v0.0.3...v0.0.4) - 2026-07-17
 
 - trasfer repo and go version by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/37
