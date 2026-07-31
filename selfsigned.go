@@ -52,14 +52,14 @@ func TLSConfig(opts ...ConfigOption) (*tls.Config, error) {
 	// Generate a new private key
 	privateKey, err := ecdsa.GenerateKey(elliptic.P384(), rand.Reader)
 	if err != nil {
-		return nil, fmt.Errorf("failed to generate private key: %v", err)
+		return nil, fmt.Errorf("failed to generate private key: %w", err)
 	}
 
 	// Generate a random serial number
 	// Generate a random serial number (64 bits, as is common practice)
 	serial, err := rand.Int(rand.Reader, new(big.Int).Lsh(big.NewInt(1), 64))
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to generate serial number: %w", err)
 	}
 
 	// Create a self-signed certificate
@@ -78,13 +78,13 @@ func TLSConfig(opts ...ConfigOption) (*tls.Config, error) {
 	}
 	certBytes, err := x509.CreateCertificate(rand.Reader, &template, &template, &privateKey.PublicKey, privateKey)
 	if err != nil {
-		return nil, fmt.Errorf("failed to create certificate: %v", err)
+		return nil, fmt.Errorf("failed to create certificate: %w", err)
 	}
 
 	// Encode the private key and certificate to PEM format
 	derKeyByte, err := x509.MarshalECPrivateKey(privateKey)
 	if err != nil {
-		return nil, fmt.Errorf("failed to marshal private key: %v", err)
+		return nil, fmt.Errorf("failed to marshal private key: %w", err)
 	}
 	keyBytes := pem.EncodeToMemory(
 		&pem.Block{
@@ -102,7 +102,7 @@ func TLSConfig(opts ...ConfigOption) (*tls.Config, error) {
 	// Create a TLS certificate
 	cert, err := tls.X509KeyPair(certBytesPEM, keyBytes)
 	if err != nil {
-		return nil, fmt.Errorf("failed to load key pair: %v", err)
+		return nil, fmt.Errorf("failed to load key pair: %w", err)
 	}
 
 	return &tls.Config{
