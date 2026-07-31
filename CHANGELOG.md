@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.6](https://github.com/monitoring-forge/selfsigned/compare/v0.0.5...v0.0.6) - 2026-07-31
+
+- add pr-agent and golangci, fix lint issue by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/44
+- ci: bump the dependencies group across 1 directory with 3 updates by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/43
+
 ## [v0.0.5](https://github.com/monitoring-forge/selfsigned/compare/v0.0.4...v0.0.5) - 2026-07-17
 
 - Update go.mod by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/40
