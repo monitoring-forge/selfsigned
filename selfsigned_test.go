@@ -3,6 +3,7 @@ package selfsigned
 import (
 	"crypto/ecdsa"
 	"crypto/tls"
+	"io"
 	"net"
 	"net/http"
 	"testing"
@@ -47,7 +48,7 @@ func TestTLSConfig_HTTPSServer(t *testing.T) {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("ok"))
+		_, _ = w.Write([]byte("ok"))
 	})
 	server := &http.Server{
 		Handler:   mux,
@@ -69,6 +70,10 @@ func TestTLSConfig_HTTPSServer(t *testing.T) {
 	}
 	resp, err := client.Get(baseURL + "/healthz")
 	assert.NoError(t, err, "unexpected error")
+	defer func() {
+		_, _ = io.Copy(io.Discard, resp.Body)
+		resp.Body.Close()
+	}()
 	assert.Equal(t, http.StatusOK, resp.StatusCode, "expected status OK")
 	assert.NotNil(t, resp.TLS, "expected resp.TLS to be non-nil")
 	assert.Greater(t, len(resp.TLS.PeerCertificates), 0, "expected at least one peer certificate")
