@@ -1,5 +1,16 @@
 # Changelog
 
+## [v0.0.7](https://github.com/monitoring-forge/selfsigned/compare/v0.0.6...v0.0.7) - 2026-09-02
+
+- Sync files with `monitoring-forge/github-common` by @monitoring-forge-files-sync-action[bot] in https://github.com/monitoring-forge/selfsigned/pull/46
+- Sync files with `monitoring-forge/github-common` by @monitoring-forge-files-sync-action[bot] in https://github.com/monitoring-forge/selfsigned/pull/48
+- go: bump github.com/stretchr/testify from 1.11.1 to 1.12.0 in the dependencies group by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/51
+- Sync files with `monitoring-forge/github-common` by @monitoring-forge-files-sync-action[bot] in https://github.com/monitoring-forge/selfsigned/pull/49
+- ci: bump the-pr-agent/pr-agent from 0.41.0 to 0.41.1 in the dependencies group by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/50
+- Sync files with `monitoring-forge/github-common` by @monitoring-forge-files-sync-action[bot] in https://github.com/monitoring-forge/selfsigned/pull/52
+- go: bump github.com/stretchr/testify from 1.12.0 to 1.12.1 in the dependencies group across 1 directory by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/53
+- ci: bump Songmu/tagpr from 1.20.1 to 1.20.2 in the dependencies group by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/55
+
 ## [v0.0.6](https://github.com/monitoring-forge/selfsigned/compare/v0.0.5...v0.0.6) - 2026-07-31
 
 - add pr-agent and golangci, fix lint issue by @kazeburo in https://github.com/monitoring-forge/selfsigned/pull/44
