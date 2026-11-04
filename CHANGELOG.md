@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.8](https://github.com/monitoring-forge/selfsigned/compare/v0.0.7...v0.0.8) - 2026-11-04
+
+- ci: bump Songmu/tagpr from 1.21.3 to 1.21.4 in the tagpr group by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/66
+- go: bump go.yaml.in/yaml/v3 from 3.0.5 to 3.0.6 in the dependencies group by @dependabot[bot] in https://github.com/monitoring-forge/selfsigned/pull/67
+
 ## [v0.0.7](https://github.com/monitoring-forge/selfsigned/compare/v0.0.6...v0.0.7) - 2026-10-29
 
 - Sync files with `monitoring-forge/github-common` by @monitoring-forge-files-sync-action[bot] in https://github.com/monitoring-forge/selfsigned/pull/46
